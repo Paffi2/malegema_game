@@ -1,0 +1,85 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/board.gd" id="1_board"]
+
+[node name="Board" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_board")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0823529, 0.109804, 0.172549, 1)
+
+[node name="RootPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -420.0
+offset_top = -280.0
+offset_right = 420.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="RootPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 18
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RootPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TitleLabel" type="Label" parent="RootPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "最小可玩局"
+horizontal_alignment = 1
+
+[node name="StatusLabel" type="Label" parent="RootPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "请选择两张相同牌进行消除"
+horizontal_alignment = 1
+
+[node name="BoardLayer" type="Control" parent="RootPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 360)
+
+[node name="ActionRow" type="HBoxContainer" parent="RootPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="RestartButton" type="Button" parent="RootPanel/MarginContainer/VBoxContainer/ActionRow"]
+custom_minimum_size = Vector2(160, 42)
+layout_mode = 2
+text = "重新开局"
+
+[node name="BackButton" type="Button" parent="RootPanel/MarginContainer/VBoxContainer/ActionRow"]
+custom_minimum_size = Vector2(160, 42)
+layout_mode = 2
+text = "返回菜单"
+
+[connection signal="pressed" from="RootPanel/MarginContainer/VBoxContainer/ActionRow/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="RootPanel/MarginContainer/VBoxContainer/ActionRow/BackButton" to="." method="_on_back_button_pressed"]

@@ -1,0 +1,8 @@
+{
+  "name": "whatajong-frontend",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2025-02-28",
+  "placement": {
+    "mode": "smart"
+  }
+}

@@ -1,12 +1,10 @@
 is_global = true
 build_property.GodotDisabledSourceGenerators = 
-build_property.GodotProjectDir = D:\Programs\myGame\malegema_game\first-demo\
-build_property.GodotProjectDirBase64 = RDpcUHJvZ3JhbXNcbXlHYW1lXG1hbGVnZW1hX2dhbWVcZmlyc3QtZGVtb1w=
+build_property.GodotProjectDir = d:\malegema_Paffi\malegema_game\first-demo\
+build_property.GodotProjectDirBase64 = 
 build_property.GodotSourceGenerators = 
 build_property.IsGodotToolsProject = 
 build_property.TargetFramework = net8.0
-build_property.TargetFrameworkIdentifier = .NETCoreApp
-build_property.TargetFrameworkVersion = v8.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
 build_property.ProjectTypeGuids = 
@@ -15,7 +13,7 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = first_demo
-build_property.ProjectDir = D:\Programs\myGame\malegema_game\first-demo\
+build_property.ProjectDir = d:\malegema_Paffi\malegema_game\first-demo\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 8.0

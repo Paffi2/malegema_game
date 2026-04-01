@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://43i6yhchsfw4"]
+
+[ext_resource type="Script" uid="uid://b2iemkuqib8s5" path="res://scripts/tile.gd" id="1_tile"]
+
+[node name="Tile" type="TextureButton" unique_id=592763568]
+custom_minimum_size = Vector2(64, 96)
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("1_tile")

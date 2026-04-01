@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "goKS6k/LzVw=",
+  "success": true,
+  "projectFilePath": "D:\\Programs\\myGame\\malegema_game\\first-demo\\first_demo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Tensors\\.nuget\\packages\\godot.sourcegenerators\\4.6.1\\godot.sourcegenerators.4.6.1.nupkg.sha512",
+    "C:\\Users\\Tensors\\.nuget\\packages\\godotsharp\\4.6.1\\godotsharp.4.6.1.nupkg.sha512",
+    "C:\\Users\\Tensors\\.nuget\\packages\\godotsharpeditor\\4.6.1\\godotsharpeditor.4.6.1.nupkg.sha512",
+    "C:\\Users\\Tensors\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.21\\microsoft.netcore.app.ref.8.0.21.nupkg.sha512",
+    "C:\\Users\\Tensors\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.21\\microsoft.windowsdesktop.app.ref.8.0.21.nupkg.sha512",
+    "C:\\Users\\Tensors\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.21\\microsoft.aspnetcore.app.ref.8.0.21.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://p4vrnyk700rm"]
+
+[ext_resource type="Script" uid="uid://bnoorjp2h5jhw" path="res://scripts/BoardManager.gd" id="1_board_mgr"]
+[ext_resource type="PackedScene" uid="uid://43i6yhchsfw4" path="res://scene/Tile.tscn" id="2_tile"]
+
+[node name="BoardScene" type="Node2D" unique_id=1496033924]
+
+[node name="Background" type="ColorRect" parent="." unique_id=2001]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.12, 0.12, 0.18, 1.0)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=2002]
+
+[node name="TopBar" type="PanelContainer" parent="UI" unique_id=720256853]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 450.0
+offset_bottom = 70.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/TopBar" unique_id=1339054807]
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="UI/TopBar/HBoxContainer" unique_id=758684023]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "请选择两张相同牌进行消除"
+
+[node name="ScoreLabel" type="Label" parent="UI/TopBar/HBoxContainer" unique_id=178955696]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "分数：0"
+
+[node name="ButtonRow" type="PanelContainer" parent="UI" unique_id=934633317]
+offset_left = 20.0
+offset_top = 650.0
+offset_right = 320.0
+offset_bottom = 700.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/ButtonRow" unique_id=728129653]
+layout_mode = 2
+
+[node name="RestartButton" type="Button" parent="UI/ButtonRow/HBoxContainer" unique_id=1355755447]
+layout_mode = 2
+text = "重新开局"
+
+[node name="BackButton" type="Button" parent="UI/ButtonRow/HBoxContainer" unique_id=1732921629]
+layout_mode = 2
+text = "返回菜单"
+
+[node name="TileLayer" type="Node2D" parent="." unique_id=1189457856]
+
+[node name="BoardManager" type="Node" parent="." unique_id=101119317]
+script = ExtResource("1_board_mgr")
+tile_scene = ExtResource("2_tile")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1238276942]
+position = Vector2(640, 380)
+zoom = Vector2(1.0, 1.0)
+current = true
+
+[connection signal="pressed" from="UI/ButtonRow/HBoxContainer/RestartButton" to="BoardManager" method="_on_restart_pressed"]
+[connection signal="pressed" from="UI/ButtonRow/HBoxContainer/BackButton" to="BoardManager" method="_on_back_pressed"]
